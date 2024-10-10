@@ -4,6 +4,7 @@ spring:
 
     redis:
       host: virginia-redis.render.com
+      username: red-cs3fa0bv2p9s73ceg6r0
       port: 6379
       password: Gx2DMU1DMXqDfaYpZFg4TW8lDcYCDcJZ
       ssl: true # Usar SSL para 'rediss://'
