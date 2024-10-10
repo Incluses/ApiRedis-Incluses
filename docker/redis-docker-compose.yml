@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+
+  redis-commander:
+    container_name: redis-commander
+    hostname: redis-commander
+    image: rediscommander/redis-commander:latest
+    environment:
+      - REDIS_HOSTS=virginia-redis.render.com:6379:Gx2DMU1DMXqDfaYpZFg4TW8lDcYCDcJZ
+    restart: always
+    ports:
+      - "8081:8081"
