@@ -18,8 +18,17 @@ public class CodeVerificationService {
         return codeVerificationRepository.save(codeVerification);
     }
 
+    public CodeVerification findById(String id) {
+        return codeVerificationRepository.findById(id).orElse(null);
+    }
+
     public CodeVerification findByCode(String code) {
-        return codeVerificationRepository.findById(code).orElse(null);
+        for (CodeVerification codeVerification : codeVerificationRepository.findAll()) {
+            if (codeVerification != null && codeVerification.getValue().equals(code)) {
+                return codeVerification;
+            }
+        }
+        return null;
     }
 
     public List<CodeVerification> findAll() {
